@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filipe | Website Oficial</title>
+    <style>
+        /* Reset de estilos básicos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Cabeçalho / Menu */
+        header {
+            background: #ffffff;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0070f3; /* Azul estilo Vercel/Moderno */
+            text-decoration: none;
+        }
+
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #666;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #0070f3;
+        }
+
+        /* Secção Principal (Hero) */
+        .hero {
+            background: max-gradient(135deg, #0070f3 0%, #000000 100%);
+            background-color: #000; /* Fundo preto minimalista como a Vercel */
+            color: #fff;
+            padding: 100px 10%;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #eaeaea;
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #fff;
+            color: #000;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .btn:hover {
+            background: #0070f3;
+            color: #fff;
+        }
+
+        /* Conteúdo Principal */
+        .container {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 32px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background: #0070f3;
+            margin: 10px auto 0 auto;
+            border-radius: 2px;
+        }
+
+        .about-text {
+            text-align: center;
+            font-size: 18px;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Rodapé */
+        footer {
+            background: #111;
+            color: #888;
+            text-align: center;
+            padding: 30px;
+            font-size: 14px;
+            margin-top: 100px;
+        }
+
+        /* Responsividade para telemóveis */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 15px;
+            }
+            nav {
+                margin-top: 15px;
+            }
+            nav a {
+                margin: 0 10px;
+            }
+            .hero h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- MENU DE NAVEGAÇÃO -->
+    <header>
+        <a href="#" class="logo">filipe.com</a>
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- SECÇÃO PRINCIPAL -->
+    <section class="hero" id="inicio">
+        <h1>Olá, eu sou o Filipe.</h1>
+        <p>Bem-vindo ao meu novo espaço na internet, alojado com a rapidez e performance da Vercel.</p>
+        <a href="#sobre" class="btn">Saber Mais</a>
+    </section>
+
+    <!-- SECÇÃO SOBRE -->
+    <main class="container" id="sobre">
+        <h2 class="section-title">Sobre Mim</h2>
+        <p class="about-text">
+            Este é um site construído em HTML puro e CSS moderno. Está otimizado para carregar instantaneamente, ideal para apresentar projetos, portfólios ou ideias de negócio de forma limpa e direta.
+        </p>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <p>&copy; 2026 filipe.com. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
