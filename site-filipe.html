@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Filipe | Website Oficial</title>
+    <title>Filipe.com | Checkout Integrado</title>
     <style>
-        /* Reset de estilos básicos */
         * {
             margin: 0;
             padding: 0;
@@ -16,169 +15,139 @@
         body {
             background-color: #f4f7f6;
             color: #333;
-            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
 
-        /* Cabeçalho / Menu */
-        header {
+        .checkout-container {
             background: #ffffff;
-            padding: 20px 10%;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            max-width: 450px;
+            width: 100%;
+            border: 1px solid #eaeaea;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #000;
+        }
+
+        .item-box {
+            background: #fafafa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #eee;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 100;
         }
 
-        .logo {
-            font-size: 24px;
+        .price {
+            font-size: 22px;
             font-weight: bold;
-            color: #0070f3; /* Azul estilo Vercel/Moderno */
-            text-decoration: none;
-        }
-
-        nav a {
-            margin-left: 20px;
-            text-decoration: none;
-            color: #666;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
             color: #0070f3;
         }
 
-        /* Secção Principal (Hero) */
-        .hero {
-            background: max-gradient(135deg, #0070f3 0%, #000000 100%);
-            background-color: #000; /* Fundo preto minimalista como a Vercel */
-            color: #fff;
-            padding: 100px 10%;
-            text-align: center;
+        .input-group {
+            margin-bottom: 15px;
         }
 
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 20px;
-            color: #eaeaea;
-            max-width: 600px;
-            margin: 0 auto 30px auto;
-        }
-
-        .btn {
-            display: inline-block;
-            background: #fff;
-            color: #000;
-            padding: 12px 30px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background 0.3s, color 0.3s;
-        }
-
-        .btn:hover {
-            background: #0070f3;
-            color: #fff;
-        }
-
-        /* Conteúdo Principal */
-        .container {
-            max-width: 1000px;
-            margin: 60px auto;
-            padding: 0 20px;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 40px;
-            font-size: 32px;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
+        .input-group label {
             display: block;
-            width: 50px;
-            height: 4px;
-            background: #0070f3;
-            margin: 10px auto 0 auto;
-            border-radius: 2px;
-        }
-
-        .about-text {
-            text-align: center;
-            font-size: 18px;
-            color: #555;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        /* Rodapé */
-        footer {
-            background: #111;
-            color: #888;
-            text-align: center;
-            padding: 30px;
+            margin-bottom: 5px;
             font-size: 14px;
-            margin-top: 100px;
+            font-weight: 500;
         }
 
-        /* Responsividade para telemóveis */
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                padding: 15px;
-            }
-            nav {
-                margin-top: 15px;
-            }
-            nav a {
-                margin: 0 10px;
-            }
-            .hero h1 {
-                font-size: 32px;
-            }
+        .input-group input, .input-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+            outline: none;
+            transition: border 0.2s;
+        }
+
+        .input-group input:focus, .input-group select:focus {
+            border-color: #0070f3;
+        }
+
+        .btn-pay {
+            width: 100%;
+            background: #0070f3;
+            color: #fff;
+            border: none;
+            padding: 14px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-top: 10px;
+        }
+
+        .btn-pay:hover {
+            background: #0051b3;
         }
     </style>
 </head>
 <body>
 
-    <!-- MENU DE NAVEGAÇÃO -->
-    <header>
-        <a href="#" class="logo">filipe.com</a>
-        <nav>
-            <a href="#inicio">Início</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#contacto">Contacto</a>
-        </nav>
-    </header>
+<div class="checkout-container">
+    <h2>Finalizar Pagamento</h2>
+    
+    <div class="item-box">
+        <span>Serviço Digital / Produto</span>
+        <span class="price">25.00 €</span>
+    </div>
 
-    <!-- SECÇÃO PRINCIPAL -->
-    <section class="hero" id="inicio">
-        <h1>Olá, eu sou o Filipe.</h1>
-        <p>Bem-vindo ao meu novo espaço na internet, alojado com a rapidez e performance da Vercel.</p>
-        <a href="#sobre" class="btn">Saber Mais</a>
-    </section>
+    <!-- Formulário processado por JS -->
+    <div class="input-group">
+        <label for="orderId">Número da Encomenda (ou Nome)</label>
+        <input type="text" id="orderId" placeholder="Ex: ENC12345" required>
+    </div>
 
-    <!-- SECÇÃO SOBRE -->
-    <main class="container" id="sobre">
-        <h2 class="section-title">Sobre Mim</h2>
-        <p class="about-text">
-            Este é um site construído em HTML puro e CSS moderno. Está otimizado para carregar instantaneamente, ideal para apresentar projetos, portfólios ou ideias de negócio de forma limpa e direta.
-        </p>
-    </main>
+    <div class="input-group">
+        <label for="method">Método de Pagamento</label>
+        <select id="method">
+            <option value="2">📱 MB WAY</option>
+            <option value="1">📐 Multibanco</option>
+            <option value="4">💳 Cartão de Crédito</option>
+        </select>
+    </div>
 
-    <!-- RODAPÉ -->
-    <footer>
-        <p>&copy; 2026 filipe.com. Todos os direitos reservados.</p>
-    </footer>
+    <button class="btn-pay" onclick="processarPagamento()">Pagar Agora</button>
+</div>
+
+<script>
+    function processarPagamento() {
+        const orderId = document.getElementById('orderId').value.trim();
+        const method = document.getElementById('method').value;
+        const amount = "25.00"; // Valor fixo do seu produto
+
+        if (!orderId) {
+            alert('Por favor, insira uma identificação para a encomenda.');
+            return;
+        }
+
+        // SUBSTITUA ESTES DADOS PELOS SEUS QUANDO CRIAR CONTA NA IFTHENPAY
+        const GATEWAY_KEY = "TEST-999999"; // A sua Chave de Gateway Pública/Testes
+        
+        // Construção do URL seguro do Simple Checkout da ifthenpay
+        // Documentação oficial: https://www.ifthenpay.com/docs/en/guides/simple-checkout/
+        const gatewayUrl = `https://ifthenpay.com{GATEWAY_KEY}&id=${encodeURIComponent(orderId)}&amount=${amount}&selected_method=${method}&lang=PT`;
+
+        // Redireciona o cliente para o ecrã seguro onde ele paga ou vê a referência
+        window.location.href = gatewayUrl;
+    }
+</script>
 
 </body>
 </html>
